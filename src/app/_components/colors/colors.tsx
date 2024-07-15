@@ -19,7 +19,7 @@ const ColorBox: React.FC<{ name: string; color: string }> = ({ name, color }) =>
 
 export const Colors: React.FC = () => {
     return (
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center" dir="ltr" lang="en">
             {Object.entries(tailwindColors).map(([name, color]) => (
                 <ColorBox key={name} name={name} color={color} />
             ))}
