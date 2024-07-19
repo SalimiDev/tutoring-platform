@@ -1,18 +1,18 @@
-import type { Config } from 'tailwindcss';
+import { Config } from 'tailwindcss';
 import { colord, extend } from 'colord';
 import mixPlugin from 'colord/plugins/mix';
 
 extend([mixPlugin]);
 
-const generateDarkenColorFrom = (input: string, percentage = 0.07): string => {
+export function generateDarkenColorFrom(input: string, percentage = 0.07): string {
     return colord(input).darken(percentage).toHex();
-};
+}
 
-const generateForegroundColorFrom = (input: string, percentage = 0.8): string => {
+export function generateForegroundColorFrom(input: string, percentage = 0.8): string {
     return colord(input)
         .mix(colord(input).isDark() ? 'white' : 'black', percentage)
         .toHex();
-};
+}
 
 type ColorObject = {
     [key: string]: string;
@@ -57,9 +57,18 @@ const config: Config = {
     content: ['./src/app/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
         colors: tailwindColors,
-        extend: {},
         container: {
             center: true,
+            padding: {
+                DEFAULT: '1rem',
+                lg: '3rem',
+                xl: '4rem',
+            },
+        },
+        extend: {
+            backgroundImage: {
+                'hero-pattern': "url('/images/tile.svg')",
+            },
         },
     },
     darkMode: 'class',

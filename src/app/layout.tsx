@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html dir='rtl' className={`dark ${yekanbakh.variable} ${figtree.variable}`}>
             <body className='grid min-h-screen grid-rows-[80px_1fr_auto] dark:bg-base-100 dark:text-base-content'>
                 <Header />
-                <div className='flex flex-1'>{children}</div>
+                <main>{children}</main>
                 <Footer />
             </body>
         </html>
