@@ -4,9 +4,23 @@ import mixPlugin from 'colord/plugins/mix';
 
 extend([mixPlugin]);
 
+/**
+ * Generate a darkened color from the input color.
+ * @param input - The input color as a string.
+ * @param percentage - The percentage to darken the color. Default is 0.07.
+ * @returns The darkened color as a hex string.
+ */
+
 export function generateDarkenColorFrom(input: string, percentage = 0.07): string {
     return colord(input).darken(percentage).toHex();
 }
+
+/**
+ * Generate a foreground color from the input color.
+ * @param input - The input color as a string.
+ * @param percentage - The percentage to mix the color. Default is 0.8.
+ * @returns The mixed color as a hex string.
+ */
 
 export function generateForegroundColorFrom(input: string, percentage = 0.8): string {
     return colord(input)
@@ -18,6 +32,7 @@ type ColorObject = {
     [key: string]: string;
 };
 
+// Define the tailwind color configuration
 export const tailwindColors: ColorObject = {
     current: 'currentColor',
     transparent: 'transparent',
@@ -53,6 +68,7 @@ export const tailwindColors: ColorObject = {
     'gradient-second': '#0fa2e9',
 };
 
+// TailwindCSS configuration
 const config: Config = {
     content: ['./src/app/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
