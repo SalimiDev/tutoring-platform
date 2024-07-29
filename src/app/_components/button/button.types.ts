@@ -7,7 +7,7 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
     ComponentBase &
     LoadingBehavior & {
         isOutline?: boolean;
-        isLink?: boolean;
         shape?: ButtonShape;
+        isLink?: boolean;
         animatedIcon?: boolean;
     };
