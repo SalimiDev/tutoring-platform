@@ -10,7 +10,8 @@
         "format": "prettier --check --ignore-path .gitignore .",
         "format:fix": "prettier --write --ignore-path .gitignore .",
         "storybook": "storybook dev -p 6006",
-        "build-storybook": "storybook build"
+        "build-storybook": "storybook build",
+        "test": "jest"
     },
     "dependencies": {
         "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
@@ -30,6 +31,9 @@
         "@storybook/nextjs": "^8.2.7",
         "@storybook/react": "^8.2.7",
         "@storybook/test": "^8.2.7",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^14.3.1",
+        "@testing-library/user-event": "^14.5.2",
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
@@ -37,6 +41,8 @@
         "eslint": "^8",
         "eslint-config-next": "13.5.6",
         "eslint-plugin-storybook": "^0.8.0",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
         "postcss": "^8.4.39",
         "postcss-import": "^16.1.0",
         "postcss-nesting": "^12.1.5",
@@ -44,6 +50,7 @@
         "prettier-plugin-tailwindcss": "^0.6.5",
         "storybook": "^8.2.7",
         "tailwindcss": "^3.4.6",
+        "ts-jest": "^29.2.4",
         "typescript": "^5"
     }
 }
