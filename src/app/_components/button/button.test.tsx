@@ -29,4 +29,13 @@ describe('Button Component', () => {
         rerender(<Button size='large'>click here</Button>);
         expect(screen.getByRole('button')).toHaveClass(`btn-lg`);
     });
+
+    test('show rendered button', () => {
+        render(
+            <Button variant='primary' isOutline={true} size='large' isDisabled={true}>
+                Click here
+            </Button>
+        );
+        screen.debug();
+    });
 });
