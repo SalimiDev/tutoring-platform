@@ -3,6 +3,9 @@
 
     &-body {
         @apply flex flex-auto flex-col gap-2 p-3 text-sm font-semibold leading-6;
+        :where(p) {
+            @apply flex-grow;
+        }
     }
 
     &-title {
