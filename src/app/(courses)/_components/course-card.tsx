@@ -4,6 +4,7 @@ import { CourseSummary } from '@/types/course-summary.interface';
 import Link from 'next/link';
 import { Badge } from '@/app/_components/badge';
 import { IconArrowLeftFill, IconClock } from '@/app/_components/icons/icons';
+import { Price } from '@/app/_components/price/price';
 
 export type CourseCardProps = CourseSummary & {};
 
@@ -36,13 +37,13 @@ export const CourseCard: React.FC<CourseCardProps> = ({
                     {title}
                 </Link>
                 <p>{subTitle}</p>
-                <div className='flex items-center justify-between'>
+                <div className='mt-3 flex items-center justify-between'>
                     <Badge variant='warning'>
                         <IconClock width={16} height={16} />
                         {duration}
                     </Badge>
 
-                    {basePrice}
+                    <Price price={basePrice} size='small'/>
                 </div>
             </div>
 
