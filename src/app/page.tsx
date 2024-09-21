@@ -1,8 +1,7 @@
-import { HomeHeroSection } from './_components/home-hero-section/home-hero-section';
-import Image from 'next/image';
-import { Button } from './_components/button/button';
-import { CourseSummary } from '@/types/course-summary.interface';
 import next from 'next';
+import Image from 'next/image';
+import { HomeHeroSection } from './_components/home-hero-section/home-hero-section';
+import { CourseSummary } from '@/types/course-summary.interface';
 import { CourseCardList } from './(courses)/_components/course-card-list';
 
 async function getNewestCourses(count: number): Promise<CourseSummary[]> {

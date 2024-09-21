@@ -18,6 +18,12 @@
         "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
         "classnames": "^2.5.1",
         "colord": "^2.9.3",
+        "D": "^1.0.0",
+        "gulp": "^5.0.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-replace": "^1.1.4",
+        "gulp-svgmin": "^4.1.0",
+        "gulp-wrap": "^0.15.0",
         "next": "13.5.6",
         "react": "^18",
         "react-dom": "^18"
