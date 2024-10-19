@@ -43,7 +43,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({
                         {duration}
                     </Badge>
 
-                    <Price price={basePrice} size='small'/>
+                    <Price price={basePrice} size='small' />
                 </div>
             </div>
 
